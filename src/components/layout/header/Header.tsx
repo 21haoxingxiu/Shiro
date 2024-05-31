@@ -1,6 +1,7 @@
 import { memo } from 'react'
 
 import { ErrorBoundary } from '~/components/common/ErrorBoundary'
+import { ThemeSwitcher } from '~/components/ui/theme-switcher'
 import { OnlyMobile } from '~/components/ui/viewport/OnlyMobile'
 import { clsxm } from '~/lib/helper'
 
@@ -17,7 +18,6 @@ import { HeaderDataConfigureProvider } from './internal/HeaderDataConfigureProvi
 import { HeaderDrawerButton } from './internal/HeaderDrawerButton'
 import { HeaderMeta } from './internal/HeaderMeta'
 import { HeaderWithShadow } from './internal/HeaderWithShadow'
-import { UserAuth } from './internal/UserAuth'
 
 export const Header = () => {
   return (
@@ -53,11 +53,11 @@ const MemoedHeader = memo(() => {
         <HeaderCenterArea>
           <HeaderContent />
           <HeaderMeta />
+          <ThemeSwitcher />
         </HeaderCenterArea>
 
-        <div className="flex size-full items-center">
-          <UserAuth />
-        </div>
+        {/* <div className="mt-6 block text-center md:absolute md:bottom-0 md:right-0 md:mt-0">
+        </div> */}
       </div>
     </HeaderWithShadow>
   )

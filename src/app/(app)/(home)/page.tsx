@@ -71,11 +71,11 @@ export default function Home() {
     <div>
       <Hero />
 
-      <PostScreen />
+      {/* <PostScreen />
 
       <NoteScreen />
       <FriendScreen />
-      <MoreScreen />
+      <MoreScreen /> */}
     </div>
   )
 }
